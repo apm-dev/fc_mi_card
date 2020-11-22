@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 50,
-                backgroundColor: Colors.white,
                 backgroundImage: AssetImage('images/parsa.jpeg'),
               ),
               Text(
@@ -42,55 +41,69 @@ class MyApp extends StatelessWidget {
                 height: 20,
                 width: 150,
                 child: Divider(
-                  color: Colors.teal.shade100,
+                  color: Colors.teal.shade200,
                 ),
               ),
-              Container(
+              Card(
+                elevation: 8,
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(
                   horizontal: 25,
                   vertical: 10,
                 ),
-                padding: EdgeInsets.all(16),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.call,
-                      color: Colors.teal,
+                child: ListTile(
+                  title: Text(
+                    '+98 936 4279240',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
                     ),
-                    SizedBox(width: 20),
-                    Text(
-                      '+98936 427 92 40',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )
-                  ],
+                  ),
+                  leading: Icon(
+                    Icons.call,
+                    color: Colors.teal,
+                  ),
                 ),
               ),
-              Container(
-                color: Colors.white,
+              Card(
+                elevation: 8,
                 margin: EdgeInsets.symmetric(
                   horizontal: 25,
                   vertical: 10,
                 ),
-                padding: EdgeInsets.all(16),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal,
+                child: ListTile(
+                  title: Text(
+                    'develop.apm@gmail.com',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
                     ),
-                    SizedBox(width: 20),
-                    Text(
-                      'develop.apm@gmail.com',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )
-                  ],
+                  ),
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                  horizontal: 25,
+                  vertical: 10,
+                ),
+                elevation: 8,
+                child: ListTile(
+                  title: Text(
+                    'Isfahan, Iran ....',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  leading: Icon(
+                    Icons.ac_unit,
+                    color: Colors.blue,
+                  ),
+                  trailing: Icon(
+                    Icons.android,
+                    color: Colors.green,
+                  ),
                 ),
               ),
             ],
